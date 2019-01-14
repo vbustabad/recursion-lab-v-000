@@ -30,10 +30,10 @@ function isPalindrome(string) {
   return false;
 }
 
-function addUpTo(array, index) {ç
+function addUpTo(array, index) {
   if (array.length === 0) {
     return 0;
   } else {
     return array[0] + addUpTo(array.slice(1));
-  }  
+  }
 }
