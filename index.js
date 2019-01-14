@@ -13,7 +13,7 @@ function reverseString(myString) {
   if (myString === "") {
     return myString;
   } else {
-    return reverse(myString[1:]) + myString[0];
+    return reverseString(myString.substr(1)) + myString.charAt(0);
   }
 }
 
