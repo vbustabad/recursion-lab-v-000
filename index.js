@@ -53,11 +53,13 @@ function maxOf(array) {
 }
 
 function includesNumber(array, number) {
-  if (array.length === 1 && array[0] === number) {
-    return true;
-  } else if (array.length > 1 && array[0] === number) {
-    array.splice(1, 1);
-    includesNumber(array, number);
+  if (array.length === 1) {
+    Object.is(array[0], number);
+  } else if (array.length > 1) {
+    if (Object.is(array[0], number) === true) {
+      array.splice(1, 1);
+      includesNumber(array, number);
+    }
   } else {
     return false;
   }
