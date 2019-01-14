@@ -22,10 +22,10 @@ function isPalindrome(string) {
   if (stringLength === 0 || stringLength === 1) {
     return true;
   }
-      
+
   if (string[0] === string[stringLength - 1]) {
     return isPalindrome(string.slice(1, stringLength - 1));
   }
-      
+
   return false;
 }
