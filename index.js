@@ -1,29 +1,31 @@
-function printString(str) {
-  console.log(str[0]);
+function printString(string) {
+  console.log(string[0]);
 
-  if (str.length > 1) {
-    let mySubString = str.substring(1, str.length);
+  if (string.length > 1) {
+    let mySubString = string.substring(1, string.length);
     printString(mySubString);
   } else {
     return true;
   }
 }
 
-function reverseString(str) {
-  if (str === "") {
-    return str;
+function reverseString(string) {
+  if (string === "") {
+    return string;
   } else {
-    return reverseString(str.substr(1)) + str.charAt(0);
+    return reverseString(string.substr(1)) + string.charAt(0);
   }
 }
 
-function isPalindrome() {
-  console.log(myString[myString.length - 1]);
-
-  if (myString.length > 1) {
-    let mySubString = myString.substring(myString.length - 2, 0);
-    printString(mySubString);
-  } else {
+function isPalindrome(string) {
+  const stringLength = string.length;
+  if (stringLength === 0 || stringLength === 1) {
     return true;
   }
+      
+  if (string[0] === string[stringLength - 1]) {
+    return isPalindrome(string.slice(1, stringLength - 1));
+  }
+      
+  return false;
 }
