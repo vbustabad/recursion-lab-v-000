@@ -56,7 +56,7 @@ function includesNumber(array, number) {
   if (array.length === 1 && array[0] === number) {
     return true;
   } else if (array.length > 1 && array[0] === number) {
-    newArray = array.slice(1);
+    const newArray = array.slice(1);
     includesNumber(newArray, number);
   } else {
     return false;
