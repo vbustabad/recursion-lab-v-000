@@ -43,5 +43,6 @@ function maxOf(array) {
     return 0;
   } else {
     return Math.max(array);
+    //maxOf(array.length - 1)
   }
 }
