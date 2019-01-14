@@ -10,13 +10,10 @@ function printString(myString) {
 }
 
 function reverseString(myString) {
-  console.log(myString[0]);
-
-  if (myString.length > 1) {
-    let mySubString = myString.substring(myString.length, 0);
-    reverseString(mySubString);
+  if (myString === "") {
+    return myString;
   } else {
-    return true;
+    return reverse(myString[1:]) + myString[0];
   }
 }
 
