@@ -39,7 +39,7 @@ function addUpTo(array, index) {
 }
 
 function maxOf(array) {
-  const newArray = array.slice();
+  var newArray = array.slice();
 
   if (newArray.length === 1) {
     return newArray[0];
