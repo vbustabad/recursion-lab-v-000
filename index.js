@@ -37,3 +37,11 @@ function addUpTo(array, index) {
     return array[0];
   }
 }
+
+function maxOf(array) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    return Math.max(array);
+  }
+}
