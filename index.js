@@ -1,19 +1,19 @@
-function printString(myString) {
-  console.log(myString[0]);
+function printString(str) {
+  console.log(str[0]);
 
-  if (myString.length > 1) {
-    let mySubString = myString.substring(1, myString.length);
+  if (str.length > 1) {
+    let mySubString = str.substring(1, str.length);
     printString(mySubString);
   } else {
     return true;
   }
 }
 
-function reverseString(myString) {
-  if (myString === "") {
-    return myString;
+function reverseString(str) {
+  if (str === "") {
+    return str;
   } else {
-    return reverseString(myString.substr(1)) + myString.charAt(0);
+    return reverseString(str.substr(1)) + str.charAt(0);
   }
 }
 
