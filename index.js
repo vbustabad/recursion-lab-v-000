@@ -39,10 +39,17 @@ function addUpTo(array, index) {
 }
 
 function maxOf(array) {
-  if (array.length === 0) {
-    return 0;
-  } else {
-    return Math.max(array);
-    maxOf(array.pop());
+  newArray = array.slice();
+
+  if (newArray.length === 1) {
+    return newArray[0];
   }
+
+  if (newArray[0] < newArray[1]) {
+    newArray.splice(0, 1);
+  } else {
+    newArray.splice(1, 1);
+  }
+
+  maxOf(newArray);
 }
