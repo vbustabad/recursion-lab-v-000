@@ -51,3 +51,11 @@ function maxOf(array) {
 
   return maxOf(array);
 }
+
+function includesNumber(array, number) {
+  if (array.includes(number)) {
+    return true;
+  } else {
+    return false;
+  }
+}
